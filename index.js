@@ -20,7 +20,10 @@ connectDB().then(() => { // connect the server with the database
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
         console.log(`Server is running in ${PORT}`);
+        console.log(`Server is running at https://urbangatebackend-production-1218.up.railway.app/`);
+
     });
+
     
 
 

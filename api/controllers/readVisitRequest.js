@@ -10,8 +10,7 @@ export async function readVisitRequest(req, res) {
         res.status(200).json(visitRequest);
       } 
       catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Failed to retrieve visit request' });
+        res.status(500).json({ message: 'Failed to retrieve visit request', error: error.message});
       }
 }
 

@@ -6,6 +6,5 @@ export default async function readProperty(req, res) {
         return res.status(200).json(response);
     }
     catch (err) {
-        res.status(500).json(err);
-    }
+        res.status(500).json({ error: err.message });    }
 } 

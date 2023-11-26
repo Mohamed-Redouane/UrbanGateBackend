@@ -1,7 +1,7 @@
 import User from '../models/users.js'
-
 export default async function checkUser(req, res){
     try { //An error can be thrown; https://www.youtube.com/watch?v=P43DW3HUUH8&t=5957s 1:32:01
+        //console.log(typeof(req.body.userID))
         const user = await User.findById(req.body.userID); //https://www.youtube.com/watch?v=P43DW3HUUH8&t=5957s at 1:38:07
         return res.status(200).json(user.role);
     } 

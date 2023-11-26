@@ -5,6 +5,7 @@ import User from '../models/users.js'
 * I Followed this guide:
 * https://www.youtube.com/watch?v=P43DW3HUUH8&t=5957s at 1:39:18
 */
+
 export default async function createProperty(req, res) {
   try { //An error can be caught; https://www.youtube.com/watch?v=P43DW3HUUH8&t=5957s 1:32:01
     const user = await User.findById(req.body.userID); //https://www.youtube.com/watch?v=P43DW3HUUH8&t=5957s at 1:38:07

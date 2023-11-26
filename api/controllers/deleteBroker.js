@@ -1,6 +1,5 @@
 import User from '../models/users.js';
 import Property from '../models/properties.js';
-
 export default async function deleteBroker(req, res) {
     try {
         const { _id } = req.params;

@@ -1,5 +1,4 @@
 import Property from '../models/properties.js'
-
 export default async function deleteProperty (req, res) {
   try {
     const { _id } = req.params; //https://www.youtube.com/watch?v=-42K44A1oMA 19:23

@@ -1,5 +1,4 @@
 import User from '../models/users.js' 
-
 export default async function manageBrokers(req, res) {
     const user = await User.findById(req.body.userID); //https://www.youtube.com/watch?v=P43DW3HUUH8&t=5957s at 1:38:07
     if (!user) {return res.status(500).json({popup: "NOT SIGNED IN",});} //checks if value is not truthy; https://www.youtube.com/watch?v=P43DW3HUUH8&t=5957s at 39:46
@@ -11,10 +10,10 @@ export default async function manageBrokers(req, res) {
         popup: "Good"});
       } 
       else {
-        return res.status(500).json({popup:"Bad"});
+        return res.status(500).json({popup:"Something went wrong"});
       }
     }
-    catch (Err) {
-        return res.status(500).json(Err);
+    catch (err) {
+        return res.status(500).json(err);
     } 
 } 
